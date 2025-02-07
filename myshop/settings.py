@@ -78,10 +78,15 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'online_clothing_store',
+        'USER': 'root',  # หรือชื่อผู้ใช้ MySQL ของคุณ
+        'PASSWORD': '',  
+        'HOST': '192.168.42.108',  
+        'PORT': '3306',  
     }
 }
+
 
 
 # Password validation
@@ -124,3 +129,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+import pymysql
+pymysql.install_as_MySQLdb()
