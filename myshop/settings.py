@@ -78,8 +78,15 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 # ใช้ MySQL แทน SQLite
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'online_clothing_store',  # ชื่อฐานข้อมูล
+        'USER': 'root',  # ตรวจสอบให้แน่ใจว่าชื่อนี้ถูกต้อง
+        'PASSWORD': 'sittiratsp2412',  # ใส่รหัสผ่านของ MySQL
+        'HOST': '127.0.0.1',  # ใช้ '127.0.0.1' แทน 'localhost' ถ้ามีปัญหา
+        'PORT': '3306',  
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        },
     }
 }
 
@@ -130,3 +137,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
