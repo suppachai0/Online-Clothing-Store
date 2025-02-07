@@ -78,10 +78,15 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 # ใช้ MySQL แทน SQLite
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # ใช้ MySQL
+        'NAME': 'online_clothing_store',  # ชื่อฐานข้อมูล (ต้องตรงกับใน phpMyAdmin)
+        'USER': 'root',  # Username ของ MySQL (ค่าเริ่มต้น XAMPP ใช้ 'root')
+        'PASSWORD': '123456789',  # รหัสผ่าน (ค่าเริ่มต้นของ XAMPP คือไม่มีรหัสผ่าน)
+        'HOST': 'localhost',  # ใช้ localhost
+        'PORT': '3306',  # พอร์ต MySQL (ค่าเริ่มต้นคือ 3306)
     }
 }
+
 
 
 
