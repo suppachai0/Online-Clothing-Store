@@ -78,12 +78,16 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 # ใช้ MySQL แทน SQLite
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # ใช้ MySQL
-        'NAME': 'online_clothing_store',  # ชื่อฐานข้อมูล (ต้องตรงกับใน phpMyAdmin)
-        'USER': 'root',  # Username ของ MySQL (ค่าเริ่มต้น XAMPP ใช้ 'root')
-        'PASSWORD': '123456789',  # รหัสผ่าน (ค่าเริ่มต้นของ XAMPP คือไม่มีรหัสผ่าน)
-        'HOST': 'localhost',  # ใช้ localhost
-        'PORT': '3306',  # พอร์ต MySQL (ค่าเริ่มต้นคือ 3306)
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'online_clothing_store',  # ชื่อฐานข้อมูล
+        'USER': 'root',  # ตรวจสอบให้แน่ใจว่าชื่อนี้ถูกต้อง
+        'PASSWORD': 'sittiratsp2412',  # ใส่รหัสผ่านของ MySQL
+        'HOST': '127.0.0.1',  # ใช้ '127.0.0.1' แทน 'localhost' ถ้ามีปัญหา
+        'PORT': '3306',  
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        },
     }
 }
 
@@ -135,3 +139,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
