@@ -10824,3 +10824,51 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/* ปรับ Navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #0d6efd !important;
+}
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+}
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+}
+
+/* ปรับ Header */
+header {
+  background: url('../images/shop-banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+/* ปรับ Card สินค้า */
+.card {
+  border: none;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-footer {
+  padding: 10px;
+}
+
+/* ปุ่ม */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* ปรับ Footer */
+footer {
+  background-color: #212529;
+  color: white;
+  padding: 20px;
+}
