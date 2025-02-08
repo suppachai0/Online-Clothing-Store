@@ -1,7 +1,7 @@
 from django.contrib import admin
-from django.urls import path, include  # ✅ ต้อง import include ด้วย
+from django.urls import path, include  # ต้อง import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('clothing_store.urls')),
+    path('', include('clothing_store.urls')),  # ตรวจสอบว่ามี include()
 ]
